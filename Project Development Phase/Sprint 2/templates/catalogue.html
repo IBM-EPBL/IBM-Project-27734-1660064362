@@ -1,0 +1,180 @@
+<html>
+<html>
+<head>
+	<title>Catlogue</title>
+		<style>
+            body{
+                background-image: url("{{url_for('static',filename='images/home4.jpg')}}") ;
+                background-repeat: no-repeat;
+                background-size: 100% ;
+                font-family:sans-serif;
+            }
+
+            .menu{
+                background-color: #131413;
+                padding: 0px;
+                margin: 0px;
+            }
+            .menu ul {
+                list-style-type: none;
+                overflow: hidden;
+                background-color: #131413;
+            }
+
+            .menu li {
+            float:left;
+            }
+
+            .menu li a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px 16px;
+                text-decoration: none;
+            }
+
+            .menu a:hover {
+                background-color: #4CAFFF;
+            }
+            
+            #head{
+                text-align: center;
+                color:brown;
+            }
+
+            .sidebar{
+                background-color: #131413;
+                margin: 0px;
+                width: 15% ;
+            }
+
+            .sidebar ul {
+                list-style-type: none;
+                overflow: hidden;
+                background-color: #131413;
+            }
+
+            .sidebar ul li a{
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px 16px;
+                text-decoration: none;
+            }
+            
+            .sidebar a:hover{
+                background-color:#4CAFFF ;
+            }
+
+            .content {
+                width: 30%;
+                height: 20%;  
+                border: 1px solid black;
+                box-sizing: border-box;
+                background-color: bisque;
+                
+            }
+
+            th{
+                background-color:darkturquoise;
+                border-collapse: collapse;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 40px;
+                
+            }
+
+            table, td {
+                background-color:darkgrey ;
+                border-collapse: collapse;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 40px;
+            }
+
+
+		</style>
+</head>
+
+
+<body>
+    <div class="menu" >
+        <div style="float:left; padding: 2px 5px;padding-left:12px;color: aliceblue;">
+            <h2>BAKE BAKERY</h2>
+        </div>
+        <div class="menuright">
+            <ul> 
+                <h3><li><a href="{{ url_for('home') }}">Home </a></li></h3>
+                <h3><li><a href="{{ url_for('catalogue') }}">Catalogue </a></li></h3>
+                <h3><li><a href="{{ url_for('cart') }}"> Cart </a></li></h3>
+                <h3><li><a href="{{ url_for('payment') }}">Payment </a></li></h3>
+                <h3><li><a href="{{ url_for('contact') }}">Contact </a></li></h3>
+                <h3><li><a href="{{ url_for('login') }}">Logout </a></li></h3>
+            </ul>
+        </div>    
+    </div>     
+
+	<div class="body">
+		<div class="section1">
+			<!-- <nav class="sidebar">
+                <ul>
+                    <h3><li><a href="catalogue_cakes.html">Cakes </a></li></h3>
+                    <h3><li><a href="#breads">Breads</a></li></h3>
+                    <h3><li><a href="macroons">Macroons </a></li></h3>
+                    <h3><li><a href="#doughnuts">Doughnuts </a></li></h3>
+                    <h3><li><a href="#pastries">Pastries </a></li></h3>
+                </ul>
+            </nav> -->
+        </div>
+        <div>
+            <table style="width:100%">
+                <tr>
+                  <th>PASTRIES</th>
+                  <th>CUPCAKES</th> 
+                  <th>COOKIES</th>
+                  <th>DOUGHNUTS</th>
+                  <th>CAKES</th>
+                </tr>
+                <tr>
+                  <td>Croissant</td>
+                  <td>Chocolate peanut butter cup</td>
+                  <td>Oatmeal</td>
+                  <td>Choc Frost</td>
+                  <td>Strawberry</td>
+                </tr>
+                <tr>
+                  <td>Madeleines</td>
+                  <td>Cinnamon toast</td>
+                  <td>Chocolate Chip</td>
+                  <td>Crunchy Choc</td>
+                  <td>Choco Truffle</td>
+                </tr>
+                <tr>
+                  <td>Beignet</td>
+                  <td>Cookies & cream</td>
+                  <td>White Chocolate</td>
+                  <td>Strawberryu Frost</td>
+                  <td>White Forest</td>
+                </tr>
+                <tr>
+                    <td>Cinnamon Roll</td>
+                    <td>Carrot cake</td>
+                    <td>Red Velvet</td>
+                    <td>Oreo Moment</td>
+                    <td>Black Forest</td>
+                </tr>
+                <tr>
+                    <td>Macroon</td>
+                    <td>Boston creme</td>
+                    <td>Peanut Butter</td>
+                    <td>Nutty Choc</td>
+                    <td>Black Current</td>
+                  </tr>
+
+              </table>
+        </div>
+	</div>
+</body>
+</html>
