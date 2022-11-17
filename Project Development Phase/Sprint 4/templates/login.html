@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Login</title>
+
+        <style>
+        body{
+                
+                background-repeat: no-repeat;
+                background-size: 100% ;
+                font-family:sans-serif;
+                background-image: url("{{url_for('static',filename='images/home.jpg')}}") 
+            }
+
+            .menu{
+                background-color: #131413;
+                padding: 0px;
+                margin: 0px;
+                border-radius: 15px;
+            }
+            ul {
+                list-style-type: none;
+                overflow: hidden;
+                background-color: #131413;
+            }
+
+            li {
+            float:left;
+            }
+
+            li a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px 16px;
+                text-decoration: none;
+            }
+
+            a:hover {
+                background-color: #4CAFFF;
+            }
+
+            #roundedcorners {
+                border-radius: 25px;
+                border: 2px solid none;
+                padding: 30px; 
+                width: 200px;
+                height: 150px;    
+                background-color:antiquewhite;
+                margin: 20px;
+                white-space: nowrap;    
+                overflow: hidden; 
+            }
+
+            .button {
+                background-color: white;
+                color: #000000;
+                border: none;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-right: 0px;
+                border-radius: 55px;
+            }
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+    </head>    
+
+    <body>
+        <div class="menu" style="float:top; width: 97.5%; height:10%;">
+            <div style="float:left; padding: 2px 5px;padding-left:12px;color: aliceblue;">
+                <h2>BAKE PANTRY</h2>
+            </div>
+            <!-- <div class="menuright">
+            <ul> 
+                <h3><li><a href="home.html">Home </a></li></h3>
+                <h3><li><a href="catalogue.html">Catalogue </a></li></h3>
+                <h3><li><a href="shoppingcart.html"> Cart </a></li></h3>
+                <h3><li><a href="payment.html">Payment </a></li></h3>
+                <h3><li><a href="contact.html">Contact </a></li></h3>
+            </ul>   
+            </div>     -->
+        </div>     
+    <div>
+    
+    <center>
+    <table id="roundedcorners">
+        <td><h2>Username </h2></td>
+        <td><input type="text" placeholder="Use lowercase"></td>
+        </tr>
+        <tr>
+        <td><h2>Password </h2></td>
+        <td><input type="password"  placeholder="********"></td>
+        </tr>
+        <tr>
+        <td colspan="2"><button class="button" style="width:100%;"><a href="{{ url_for('home') }}">Login</a></button></td>
+        </tr>
+    </table>
+    </center>
+    </div>
+        
+
+        
+    </body>
+</html>
