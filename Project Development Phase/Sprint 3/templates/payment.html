@@ -1,0 +1,136 @@
+<html>
+
+    <head>
+    <title>Payment</title>
+
+    <style>
+   
+    #roundedcorners {
+        border-radius: 25px;
+        border: 2px solid none;
+        padding: 20px; 
+        width: 200px;
+        height: 150px;    
+        background-color: white;
+        margin: 20px;
+        white-space: nowrap;
+        overflow: hidden; 
+    }
+
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 0px;
+        border-radius: 55px;
+    }
+    .button:hover{
+        background-color: #4CAFFF;
+        color: white;
+    }
+        body{
+                background-repeat: no-repeat;
+                background-size: 100% ;
+                font-family:sans-serif;
+                background-image: url("{{url_for('static',filename='images/home.jpg')}}") 
+            }
+
+            .menu{
+                background-color: #131413;
+                padding: 0px;
+                margin: 0px;
+            }
+            ul {
+                list-style-type: none;
+                overflow: hidden;
+                background-color: #131413;
+            }
+
+            li {
+            float:left;
+            }
+
+            li a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px 16px;
+                text-decoration: none;
+            }
+
+            a:hover {
+                background-color: #4CAFFF;
+            }
+    .paymentIcons{
+        margin-right: 55px;
+    }
+    </style>
+    </head>    
+
+    <body>
+        <div class="menu" >
+            <div style="float:left; padding: 2px 5px;padding-left:12px;color: aliceblue;">
+                <h2>BAKE PANTRY</h2>
+            </div>
+            <div class="menuright">
+            <ul> 
+                <h3><li><a href="{{ url_for('home') }}">Home </a></li></h3>
+                <h3><li><a href="{{ url_for('catalogue') }}">Catalogue </a></li></h3>
+                <h3><li><a href="{{ url_for('cart') }}"> Cart </a></li></h3>
+                <h3><li><a href="{{ url_for('payment') }}">Payment </a></li></h3>
+                <h3><li><a href="{{ url_for('contact') }}">Contact </a></li></h3>
+                <h3><li><a href="{{ url_for('login') }}">Logout </a></li></h3>
+            </ul>   
+            </div>    
+        </div>  
+    <center>
+    <table id="roundedcorners">
+        <tr>
+        <td colspan="2"><center><strong><h1 style="text-align:center; color:#af4c5c;">Payment</h1></strong></center></td>
+        </tr>
+        <tr>
+        <td><h4 style="color:#af4c5c">Card Number:</h4></td>
+        <td><input type="text" placeholder="1111 1111 1111 1111"></td>
+        </tr>
+        <tr>
+        <td><h4  style="color:#af4c5c">Card Holder's Name: </h4></td>
+        <td><input type="text" placeholder="(e.g.)abc"></td>
+        </tr>
+        <tr>
+        <td><h4  style="color:#af4c5c">Password: </h4></td>
+        <td><input type="password"  placeholder="********"></td>
+        </tr>
+        <tr>
+        <td><h4  style="color:#af4c5c">Expiration Date: </h4></td>
+        <td><input type="date" style="color:gray;"></td>
+        </tr>
+        <tr>
+        <td><h4  style="color:#af4c5c">CVV: </h4></td>
+        <td style="color:white;"><input type="text" placeholder="999" style="width:50px;"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            <img src="https://000456558.codepen.website/icons/pay2.png" width=60px class="paymentIcons">
+                <img src="https://000456558.codepen.website/icons/pay3.png" width=60px class="paymentIcons">
+            <img src="https://000456558.codepen.website/icons/pay4.png" width=60px class="paymentIcons">
+            </td>
+        </tr>
+        <tr>
+        <td colspan="2">&nbsp;</td>    
+        </tr>    
+        <tr>
+            <td colspan="2"><form method="post" action="orderconfirm.html">
+            <input type="submit" value="Make Payment" class="button" style="width:100%;"></form></td>
+        </tr>
+    </table>
+    </center>
+    </div>
+    
+        
+    </body>
+</html>
