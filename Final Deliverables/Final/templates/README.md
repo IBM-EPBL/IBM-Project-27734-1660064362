@@ -1,1 +1,0 @@
-Cloud Application Inventory Management System for Retailers 
